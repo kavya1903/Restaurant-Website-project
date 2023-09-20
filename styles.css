@@ -1,0 +1,997 @@
+/* Add some CSS styles to whole page */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open-sans" sans-serif;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/*Add CSS styles to body elemnt*/
+body {
+  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+/* CSS code for the header */
+#header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f0f0f0;
+  padding: 10px;
+}
+
+#logo {
+  margin-left: 20px;
+}
+
+.nav_bar {
+  display: flex;
+  align-items: center;
+}
+
+.links {
+  display: flex;
+}
+
+.links ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.links li {
+  display: inline-block;
+}
+
+.links a {
+  text-decoration: none;
+  color: #333333;
+  padding: 10px 15px;
+}
+
+.links a:hover {
+  background-color: #cccccc;
+}
+
+/* Media queries for responsive design */
+@media screen and (max-width: 768px) {
+  .links {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: -100%;
+    transition: all 0.5s ease-in-out;
+    z-index: -1;
+    background-color: #f0f0f0;
+    box-shadow: -2px -2px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .links.active {
+    left: 0%;
+    z-index: 1;
+  }
+
+  .links li {
+    display: block;
+    text-align: center;
+    border-bottom: 1px solid #cccccc;
+  }
+}
+
+#home {
+  background-image: url("images/img.jpg");
+}
+#food-menu {
+  background-image: url("images/img1.jpg");
+}
+#about {
+  background-image: url("images/img17.jpg");
+}
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  background-size: cover;
+  background-position: center;
+}
+
+.hero,
+.about-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: #ffffff;
+}
+
+.welocme-title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.welocme-title span {
+  display: inline-block;
+  width: 100px;
+  height: 2px;
+  background-color: #ffffff;
+  margin: 0 10px;
+}
+
+h1 {
+  font-size: 48px;
+  margin-top: 10px;
+}
+
+p {
+  font-size: 18px;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #fad961;
+  background-image: linear-gradient(90deg, #fad961 0%, #f76b1c 100%);
+
+  text-transform: uppercase;
+}
+
+button a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+}
+button:hover {
+  border-radius: 1em;
+}
+/*Add some CSS styles to titles*/
+@media only screen and (max-width: 480px) {
+  /* Styles for devices with width less than or equal to480 px */
+
+  /* Reduce the font size of the welcome title, heading, and paragraph */
+  .welocme-title {
+    font-size: 16 px;
+  }
+
+  h1 {
+    font-size: 32 px;
+  }
+
+  .welocme-title span {
+    width: 24px;
+  }
+
+  /* Reduce the padding and font size of the button */
+  button {
+    padding: 5 px;
+    font-size: 14 px;
+  }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  /* Styles for devices with width between481 px and768 px */
+
+  /* Reduce the font size of the heading and paragraph */
+  h1 {
+    font-size: 40 px;
+  }
+
+  p {
+    font-size: 16 px;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  /* Styles for devices with width greater than or equal to769 px */
+
+  /* Increase the font size of the welcome title, heading, and paragraph */
+  .welocme-title {
+    font-size: 28 px;
+  }
+
+  h1 {
+    font-size: 56 px;
+  }
+
+  p {
+    font-size: 20 px;
+  }
+
+  /* Increase the padding and font size of the button */
+  button {
+    padding: 15 px;
+    font-size: 18 px;
+  }
+}
+/* CSS code for the about-us section element */
+#about-us {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+}
+
+.imgs {
+  width: 50%;
+  height: 100%;
+  background-image: url("images/img6.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.text {
+  width: 50%;
+  height: 100%;
+  padding: 20px;
+  background-color: #f0f0f0;
+}
+
+.text h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.text p {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.menu-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #000000;
+}
+
+.menu-btn a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+/* Media queries for different device widths */
+
+@media only screen and (max-width: 768px) {
+  /* Styles for devices with width less than or equal to768 px */
+
+  /* Use a column layout for the section element */
+  #about-us {
+    flex-direction: column;
+  }
+
+  /* Reduce the width and height of the image and text elements */
+  .imgs {
+    width: 100%;
+    height: 50%;
+  }
+
+  .text {
+    width: 100%;
+    height: 50%;
+  }
+
+  /* Reduce the font size of the heading, paragraph, and button */
+  .text h2 {
+    font-size: 24 px;
+  }
+
+  .text p {
+    font-size: 16 px;
+  }
+
+  .menu-btn {
+    padding: 5 px;
+    font-size: 16 px;
+  }
+}
+
+.container {
+  padding: 2px 16px;
+}
+.container h4 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.popularDishes,
+.menu-card {
+  display: flex;
+  flex-wrap: wrap; /* allow cards to wrap to a new line */
+  justify-content: center; /* center align the cards horizontally */
+  gap: 20px;
+
+  /* add spacing between the cards */
+}
+.heading {
+  margin: 2rem 0;
+  text-align: left;
+  padding-left: 2rem;
+}
+h3 {
+  font-size: 50px;
+  text-decoration: none;
+  font-style: normal;
+  border-left: 4px solid #333;
+  padding-left: 10px;
+  margin: 0px 20px;
+}
+.card {
+  flex: 1 0 300px; /* set cards to have equal width */
+  max-width: 300px;
+  height: 40vh; /* set maximum width for the cards */
+  padding: 1rem;
+}
+.card {
+  box-shadow: inset 6px 6px 10px 0 rgba(0, 0, 0, 0.2),
+    inset -6px -6px 10px 0 rgba(255, 255, 255, 0.5);
+  transition: 0.3s;
+  width: 40px;
+}
+.card img {
+  width: 100%;
+  height: 50%;
+  object-fit: cover;
+}
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Media queries for different device widths */
+
+@media only screen and (max-width: 768px) {
+  /* Styles for devices with width less than or equal to768 px */
+
+  /* Reduce the font size of the heading */
+  .heading h3 {
+    font-size: 24 px;
+  }
+
+  /* Reduce the width of the card elements */
+  .card {
+    width: 50%;
+  }
+}
+
+.heading {
+  font-size: 25px;
+  margin-right: 25px;
+}
+
+.events .events-section {
+  padding: 2rem;
+}
+hr {
+  height: 10px;
+  border: 0;
+  box-shadow: 0 10px 10px -10px #8c8b8b inset;
+  margin: 2rem;
+}
+.upcoming-events {
+  transition: 0.3s;
+  width: 60vw;
+  margin: 1rem;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+.upcoming-events img {
+  width: 75%;
+  height: 30vh;
+  margin: 1rem;
+  padding: 10px;
+}
+.upcoming-events:hover {
+  border-radius: 30px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+.upcoming-events .container {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.5em;
+  padding: 10px;
+}
+/* Add CSS for gallery page*/
+.main-title {
+  text-align: center;
+  text-transform: uppercase;
+  padding: 50px;
+  font-size: larger;
+  background-color: #0a0a23;
+  color: #fff;
+  border-bottom: 4px solid #fdb347;
+}
+
+.gallery {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px 10px;
+}
+.gallery img {
+  width: 100%;
+  max-width: 350px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.gallery::after {
+  content: "";
+  width: 350px;
+}
+
+.info-before-bar,
+.info-after-bar {
+  width: 60px;
+  display: inline-block;
+  height: 1px;
+  background: #fff;
+  vertical-align: middle;
+  text-align: center;
+}
+/* Add css for footer */
+#footer {
+  left: 0;
+  bottom: 12px;
+  width: 100%;
+  background: rgba(0, 0, 0);
+  padding-top: 60px;
+}
+footer {
+  bottom: 12px;
+  left: 0;
+  right: 0;
+
+  height: auto;
+  width: 100vw;
+  padding-top: 40px;
+  color: #fff;
+  font-family: "Euclid Circular A", "Poppins";
+  position: relative;
+  margin: 0 30px;
+  color: rgb(255 255 255);
+}
+
+footer.top > img {
+  height: 50px;
+  margin: 0 auto 50px;
+}
+
+footer.top {
+  display: grid;
+  border-bottom: 2px solid rgb(255 255 255 / 20%);
+  padding-bottom: 20px;
+}
+
+footer.bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column-reverse;
+  gap: 8px;
+  padding: 20px 0;
+  text-align: center;
+}
+
+footer.top .links {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 30px;
+  margin-bottom: 30px;
+}
+.fa {
+  color: #fff;
+}
+.links-column {
+  display: grid;
+  gap: 10px;
+  text-align: center;
+  font-family: "Euclid Circular A", "Poppins";
+}
+
+footer h2 {
+  font-family: "Euclid Circular A", "Poppins";
+  margin: 0 0 10px;
+  font-size: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: white;
+}
+
+footer p {
+  font-family: "Euclid Circular A", "Poppins";
+  margin: 0;
+}
+
+.legal > a {
+  margin: 0 0 0 4px;
+}
+
+.legal,
+.copyright {
+  font-size: 12px;
+}
+
+.legal > span {
+  margin-right: 10px;
+}
+
+footer.top .socials {
+  position: absolute;
+  left: 50%;
+  bottom: 10px;
+  translate: -50% 0;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  height: 56px;
+}
+
+footer.top .socials > a {
+  font-size: 24px;
+}
+
+.socials-column :is(h2, p) {
+  display: none;
+}
+
+@media (width > 400px) {
+  .links-column {
+    text-align: left;
+  }
+
+  footer.top .links {
+    grid-template-columns: repeat(2, 1fr);
+    margin-right: 50px;
+  }
+
+  footer.bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 20px;
+    text-align: left;
+  }
+
+  footer.top .socials {
+    left: 0;
+    translate: 0;
+  }
+
+  footer.top > img {
+    margin: 0 0 50px;
+  }
+}
+
+@media (width >= 640px) {
+  footer {
+    margin: 0 auto;
+    max-width: 580px;
+    padding: 0;
+  }
+
+  footer.top .links {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  footer.top .socials {
+    position: static;
+  }
+
+  footer.bottom {
+    justify-content: flex-start;
+  }
+
+  .socials-column :is(h2, p) {
+    display: block;
+  }
+}
+
+form {
+  margin: 20px;
+  text-align: center;
+}
+
+label {
+  display: inline-block;
+  width: 100px;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="time"],
+input[type="number"],
+input[type="tel"] {
+  width: 500px;
+  height: 35px;
+  margin-bottom: 10px;
+  margin-left: 0;
+  padding: 10px;
+}
+input[type="submit"] {
+  background-color: #04aa6d;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+label {
+  margin-left: 1rem;
+  margin-right: 0;
+  padding: 20px;
+  font-size: 20px;
+  width: 10%;
+}
+.resv-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin: 3rem;
+  font-size: 24px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.resv-title h1,
+.about-title h1,
+.hero h1 {
+  text-transform: uppercase;
+  text-decoration: none;
+  line-height: 5rem;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 40px;
+  letter-spacing: 5.4px;
+}
+
+@media only screen and (max-width: 768px) {
+  /* Styles for devices with width less than or equal to768 px */
+
+  /* Reduce the font size of the title, paragraph, label, and button */
+  .resv-title h1 {
+    font-size: 32 px;
+  }
+
+  .resv-title p {
+    font-size: 16 px;
+  }
+
+  label {
+    font-size: 16 px;
+  }
+
+  button {
+    font-size: 16 px;
+  }
+
+  /* Reduce the width of the input elements */
+  input {
+    width: 50%;
+  }
+}
+/* CSS code for the section element */
+.our-story {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.bg-container {
+  display: flex;
+  width: 80%;
+  height: 75vh;
+}
+
+.bg-left {
+  width: 50%;
+  height: 100%;
+  background-image: url("images/img.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.bg-right {
+  width: 50%;
+  height: 100%;
+  padding: 20px;
+  background-color: #f0f0f0;
+}
+
+.bg-right h2 {
+  font-size: 36px;
+}
+
+.bg-right span {
+  display: block;
+  width: 100px;
+  height: 2px;
+  background-color: #000000;
+}
+
+.bg-right p {
+  font-size: 18px;
+}
+
+/* Media queries for different device widths */
+
+@media only screen and (max-width: 768px) {
+  /* Styles for devices with width less than or equal to768 px */
+
+  /* Use a column layout for the background container element */
+  .bg-container {
+    flex-direction: column;
+  }
+
+  /* Reduce the width and height of the left and right elements */
+  .bg-left {
+    width: 100%;
+    height: 50%;
+  }
+
+  .bg-right {
+    width: 100%;
+    height: 50%;
+  }
+
+  /* Reduce the font size of the heading and paragraph */
+  .bg-right h2 {
+    font-size: 24 px;
+  }
+
+  .bg-right p {
+    font-size: 16 px;
+  }
+}
+
+/* CSS code for the section element */
+#story {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url("images/img17.jpg") no-repeat;
+  background-size: 100% 100%;
+}
+
+.story {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  padding: 20px;
+  background-color: #f0f0f0;
+}
+
+.story h2 {
+  font-size: 36px;
+}
+
+.story span {
+  display: block;
+  width: 100px;
+  height: 2px;
+  background-color: #000000;
+}
+
+.story p {
+  font-size: 18px;
+}
+
+/* Media queries for different device widths */
+
+@media only screen and (max-width: 768px) {
+  /* Styles for devices with width less than or equal to768 px */
+
+  /* Reduce the width of the story element */
+  .story {
+    width: 90%;
+  }
+
+  /* Reduce the font size of the heading and paragraph */
+  .story h2 {
+    font-size: 24 px;
+  }
+
+  .story p {
+    font-size: 16 px;
+  }
+}
+
+/* Add some CSS styles to the menu table */
+
+.menu-table {
+  border-collapse: collapse;
+  width: 80%;
+  margin: auto;
+}
+
+.menu-table th,
+.menu-table td {
+  padding: 10px;
+  text-align: left;
+}
+
+.menu-table th {
+  background-color: #f0f0f0;
+  font-weight: bold;
+}
+
+.menu-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* Add some CSS styles to the images */
+.menu-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-right: 10px;
+  float: left;
+}
+
+/* Add some CSS styles to the figure and figcaption elements */
+figure {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+figcaption {
+  font-style: italic;
+  color: gray;
+}
+
+/* Add some more CSS styles to the menu table */
+.menu-table td {
+  vertical-align: top; /* Align the table data to the top of the cell */
+}
+
+.menu-table td:first-child {
+  font-size: 20px; /* Increase the font size of the name of the item */
+  font-weight: bold; /* Make the name of the item bold */
+}
+
+.menu-table td:last-child {
+  color: green; /* Change the color of the price of the item to green */
+  text-align: right; /* Align the price of the item to the right of the cell */
+}
+
+/* Add some background colors for the table sections based on the categories */
+.menu-table tr:nth-child(1) {
+  background-color: #ffcccc; /* Add a light red background color for the starters section header */
+}
+
+.menu-table tr:nth-child(2),
+.menu-table tr:nth-child(3),
+.menu-table tr:nth-child(4),
+.menu-table tr:nth-child(5),
+.menu-table tr:nth-child(6),
+.menu-table tr:nth-child(7),
+.menu-table tr:nth-child(8),
+.menu-table tr:nth-child(9),
+.menu-table tr:nth-child(10),
+.menu-table tr:nth-child(11),
+.menu-table tr:nth-child(12) {
+  background-color: #ffe6e6; /* Add a lighter red background color for the starters section items */
+}
+
+.menu-table tr:nth-child(13) {
+  background-color: #ccffcc; /* Add a light green background color for the main course section header */
+}
+
+.menu-table tr:nth-child(14),
+.menu-table tr:nth-child(15),
+.menu-table tr:nth-child(16),
+.menu-table tr:nth-child(17),
+.menu-table tr:nth-child(18),
+.menu-table tr:nth-child(19),
+.menu-table tr:nth-child(20),
+.menu-table tr:nth-child(21),
+.menu-table tr:nth-child(22) {
+  background-color: #e6ffe6; /* Add a lighter green background color for the main course section items */
+}
+
+.menu-table tr:nth-child(23) {
+  background-color: #ccccff; /* Add a light blue background color for the dessert section header */
+}
+
+.menu-table tr:nth-child(24),
+.menu-table tr:nth-child(25),
+.menu-table tr:nth-child(26),
+.menu-table tr:nth-child(27),
+.menu-table tr:nth-child(28),
+.menu-table tr:nth-child(29),
+.menu-table tr:nth-child(30),
+.menu-table tr:nth-child(31),
+.menu-table tr:nth-child(32),
+.menu-table tr:nth-child(33) {
+  background-color: #e6e6ff; /* Add a lighter blue background color for the dessert section items */
+}
+#mains {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#etitle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 35px;
+}
+#etitle h1 {
+  font-size: 48px;
+}
+#etitle p {
+  font-size: 18px;
+}
+.event-page {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.e-card {
+  width: 25%;
+  margin: 10px;
+}
+.e-card img {
+  width: 100%;
+  height: 50%;
+}
+#evts {
+  padding: 30px;
+}
+#evts h4 {
+  font-size: 18px;
+  padding: 10px;
+}
+#evts p {
+  font-size: 16px;
+  padding: 5px 10px;
+}
+#evts a {
+  text-decoration: none;
+}
+/* Media queries for different device widths */
+@media only screen and (max-width: 768px) {
+  /* Styles for devices with width less than or
+  equal to768 px */ /* Reduce the font size of the headings and paragraphs */
+  #etitle h1 {
+    font-size: 32 px;
+  }
+  #etitle p {
+    font-size: 16 px;
+  }
+  #evts h4 {
+    font-size: 16 px;
+  }
+  #evts p {
+    font-size: 14 px;
+  }
+  /* Reduce the width of
+  the card elements */
+  .e-card {
+    width: 50%;
+  }
+}
