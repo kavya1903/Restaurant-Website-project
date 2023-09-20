@@ -13,7 +13,7 @@ This is a simple restaurant website that showcases the restaurant's menu, events
 
 ## Features
 
-- Interactive and mobile-friendly design
+- Interactive design
 - Detailed information about the restaurant, its menu, and events
 - High-quality food images
 - Embedded location map
