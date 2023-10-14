@@ -1,4 +1,4 @@
-<!--<?php 
+<?php 
 
 
 date_default_timezone_set('Asia/Kolkata');
@@ -28,7 +28,7 @@ if(isset($_POST['submit'])){
   }
   
 
-?>-->
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
